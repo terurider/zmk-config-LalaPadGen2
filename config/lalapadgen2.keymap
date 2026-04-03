@@ -3,7 +3,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT_LAYER   0
@@ -85,52 +84,52 @@
         DEFAULT_LAYER {
             display-name = "Default";
             bindings = <
-&kp Q                &kp W            &kp E         &kp R      &kp T                             &kp Y      &kp U     &kp I           &kp O                 &kp P
-&mt2 LEFT_SHIFT A    &kp S            &kp D         &kp F      &kp G                             &kp H      &kp J     &kp K           &kp L                 &mt2 RIGHT_SHIFT COLON
-&mt2 LEFT_CONTROL Z  &mt2 LEFT_WIN X  &kp C         &kp V      &kp B                             &kp N      &kp M     &kp COMMA       &mt2 LEFT_ALT PERIOD  &mt2 LEFT_CONTROL MINUS
-&kp LCTRL            &kp LWIN         &kp LEFT_ALT  &mo 1      &kp SPACE  &mo 2   &kp BACKSPACE  &kp ENTER  &mo 2     &kp LANGUAGE_2  &kp LANGUAGE_1        &kp BACKSLASH
-                     &none            &kp RIGHT     &kp DOWN   &kp LEFT   &kp UP  &kp UP         &kp LEFT   &kp DOWN  &kp RIGHT       &none
-&mkp LCLK            &mkp RCLK        &mkp MCLK                                                                       &mkp LCLK       &mkp RCLK             &mkp MCLK
-&mkp MB4             &mkp MB5         &kp LG(TAB)   &kp LG(D)  &kp LCTRL                         &mkp MB4   &mkp MB5  &kp LG(TAB)     &kp LG(D)             &kp LCTRL
+&kp Q                &kp W            &kp E         &kp R      &kp T                               &kp Y        &kp U     &kp I           &kp O                 &kp P
+&mt2 LEFT_SHIFT A    &kp S            &kp D         &kp F      &kp G                               &kp H        &kp J     &kp K           &kp L                 &mt2 RIGHT_SHIFT COLON
+&mt2 LEFT_CONTROL Z  &mt2 LEFT_WIN X  &kp C         &kp V      &kp B                               &kp N        &kp M     &kp COMMA       &mt2 LEFT_ALT PERIOD  &mt2 LEFT_CONTROL MINUS
+&kp ESC              &kp LWIN         &kp LEFT_ALT  &trans     &lt 1 SPACE  &mo 3   &kp BACKSPACE  &lt 2 ENTER  &trans    &kp LANGUAGE_2  &kp LANGUAGE_1        &kp ESC
+                     &none            &kp RIGHT     &kp DOWN   &kp LEFT     &kp UP  &kp UP         &kp LEFT     &kp DOWN  &kp RIGHT       &none
+&mkp LCLK            &mkp RCLK        &mkp MCLK                                                                           &mkp LCLK       &mkp RCLK             &mkp MCLK
+&mkp MB4             &mkp MB5         &kp LG(TAB)   &kp LG(D)  &kp LCTRL                           &mkp MB4     &mkp MB5  &kp LG(TAB)     &kp LG(D)             &kp LCTRL
             >;
         };
 
         SECONDARY_LAYER {
             display-name = "secondary_layer";
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp KP_NUMLOCK    &kp KP_NUMBER_7    &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&kp NUMBER_6      &kp N7             &kp N8        &kp N9        &kp N0                    &trans            &kp KP_NUMBER_4    &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp F6            &kp F7             &kp F8        &kp F9        &kp F10                   &trans            &kp KP_NUMBER_1    &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK
-&trans            &trans             &trans        &trans        &trans   &trans  &kp DEL  &trans            &trans             &kp KP_NUMBER_0  &kp KP_DOT       &kp KP_DIVIDE
-                  &trans             &trans        &trans        &trans   &trans  &trans   &trans            &trans             &trans           &trans
-&trans            &trans             &trans                                                                                     &trans           &trans           &trans
-&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans        &trans        &trans                    &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans           &trans           &trans
+&kp TILDE         &kp F7             &kp F8  &kp F9  &kp F12                   &kp KP_NUMBER_7   &kp KP_NUMBER_8    &kp KP_NUMBER_9  &trans   &trans
+&trans            &kp F4             &kp F5  &kp F6  &kp F11                   &kp KP_NUMBER_4   &kp KP_NUMBER_5    &kp KP_NUMBER_6  &trans   &kp COLON
+&trans            &kp F1             &kp F2  &kp F3  &kp F10                   &kp KP_N1         &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp DOT  &kp SLASH
+&trans            &trans             &trans  &trans  &trans   &trans  &kp DEL  &kp KP_N0         &trans             &trans           &trans   &trans
+                  &trans             &trans  &trans  &trans   &trans  &trans   &trans            &trans             &trans           &trans
+&trans            &trans             &trans                                                                         &trans           &trans   &trans
+&kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans  &trans  &trans                    &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans           &trans   &trans
             >;
         };
 
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR            &kp PERCENT                            &kp PAGE_UP    &kp HOME  &kp UP_ARROW    &kp END    &kp PRINTSCREEN
-&kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                  &kp PAGE_DOWN  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp SCROLLLOCK
-&kp GRAVE        &kp SQT        &kp SEMI      &kp LEFT_BRACKET      &kp RIGHT_BRACKET                      &trans         &mkp MB4  &trans          &mkp MB5   &kp PAUSE_BREAK
-&trans           &trans         &trans        &trans                &trans                 &trans  &trans  &trans         &trans    &trans          &trans     &trans
-                 &trans         &trans        &trans                &trans                 &trans  &trans  &trans         &trans    &trans          &trans
-&trans           &trans         &trans                                                                                              &trans          &trans     &trans
-&trans           &trans         &trans        &trans                &trans                                 &trans         &trans    &trans          &trans     &trans
+&bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                    &trans     &kp LA(LEFT_ARROW)  &kp UP_ARROW    &kp LA(RIGHT_ARROW)  &trans
+&bt BT_CLR      &bt BT_CLR_ALL  &trans          &trans          &trans                          &kp ENTER  &kp LEFT            &kp DOWN_ARROW  &kp RIGHT            &trans
+&zip_dyn_scale  &zip_dyn_scale  &zip_dyn_scale  &zip_dyn_scale  &zip_dyn_scale                  &trans     &kp PAGE_UP         &kp PAGE_DOWN   &kp HOME             &kp END
+&trans          &trans          &trans          &trans          &trans          &trans  &trans  &trans     &trans              &trans          &trans               &trans
+                &trans          &trans          &trans          &trans          &trans  &trans  &trans     &trans              &trans          &trans
+&trans          &trans          &trans                                                                                         &trans          &trans               &trans
+&trans          &trans          &trans          &trans          &trans                          &trans     &trans              &trans          &trans               &trans
             >;
         };
 
         SYSTEM_LAYER {
             display-name = "system_layer";
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5                   &out OUT_TOG                   &bt BT_SEL 0                   &bt BT_SEL 1                   &bt BT_SEL 2                   &bt BT_SEL 3
-&kp F6   &kp F7   &kp F8   &kp F9   &kp F10                  &sys_reset                     &bootloader                    &bt BT_CLR                     &bt BT_CLR_ALL                 &trans
-&kp F11  &kp F12  &kp F13  &kp F14  &kp F15                  &zip_dyn_scale ZDS_XY ZDS_INC  &zip_dyn_scale ZDS_XY ZDS_DEC  &zip_dyn_scale ZDS_SC ZDS_INC  &zip_dyn_scale ZDS_SC ZDS_DEC  &zip_dyn_scale ZDS_ALL ZDS_RST
-&trans   &trans   &trans   &trans   &trans   &trans  &trans  &trans                         &trans                         &trans                         &trans                         &trans
-         &trans   &trans   &trans   &trans   &trans  &trans  &trans                         &trans                         &trans                         &trans
-&trans   &trans   &trans                                                                                                   &trans                         &trans                         &trans
-&trans   &trans   &trans   &trans   &trans                   &trans                         &trans                         &trans                         &trans                         &trans
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCL       &trans     &trans                         &trans         &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT
+&kp AT_SIGN       &kp SLASH          &kp DOLLAR     &kp ASTRK  &kp CARET                      &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&trans            &trans             &kp SEMICOLON  &trans     &kp BACKSLASH                  &kp AMPERSAND  &kp EQUAL  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
+&trans            &trans             &trans         &trans     &trans         &trans  &trans  &trans         &trans     &trans                &trans                 &trans
+                  &trans             &trans         &trans     &trans         &trans  &trans  &trans         &trans     &trans                &trans
+&trans            &trans             &trans                                                                             &trans                &trans                 &trans
+&trans            &trans             &trans         &trans     &trans                         &trans         &trans     &trans                &trans                 &trans
             >;
         };
     };
