@@ -135,13 +135,13 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                                                  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &trans     &trans                         &trans         &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT
+&kp AT_SIGN       &kp SLASH          &kp DOLLAR       &kp ASTRK  &kp CARET                      &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&trans            &trans             &kp SEMICOLON    &trans     &kp BACKSLASH                  &kp AMPERSAND  &kp EQUAL  &kp LESS_THAN         &kp GREATER_THAN       &kp PERCENT
+&trans            &trans             &trans           &trans     &trans         &trans  &trans  &trans         &trans     &trans                &trans                 &trans
+                  &trans             &trans           &trans     &trans         &trans  &trans  &trans         &trans     &trans                &trans
+&trans            &trans             &trans                                                                               &trans                &trans                 &trans
+&trans            &trans             &trans           &trans     &trans                         &trans         &trans     &trans                &trans                 &trans
             >;
         };
     };
